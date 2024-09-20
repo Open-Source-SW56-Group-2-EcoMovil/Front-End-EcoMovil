@@ -1,0 +1,34 @@
+<div class="max-w-2xl mx-auto p-4 bg-white rounded-lg shadow-md">
+  <h2 class="text-2xl font-bold text-center text-green-600 mb-4">Contact Forum</h2>
+  <p class="text-gray-700 text-center mb-6">
+    Here you can search for owners and get help from them to buy or rent your vehicle.
+  </p>
+
+  <!-- Formulario para enviar mensajes -->
+  <form (ngSubmit)="onSubmit()" #contactForm="ngForm" class="mb-6">
+    <div class="mb-4">
+      <textarea
+        class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500"
+        name="message"
+        [(ngModel)]="message"
+        placeholder="Tell us!"
+        required>
+      </textarea>
+    </div>
+    <button
+      type="submit"
+      class="w-full bg-green-500 text-white py-2 px-4 rounded-lg hover:bg-green-600 transition"
+      [disabled]="!contactForm.form.valid">
+      Post
+    </button>
+  </form>
+
+  <!-- Sección para mostrar los posts -->
+  <div class="bg-gray-100 p-4 rounded-lg">
+    <h3 class="text-xl font-semibold mb-4">Forum Posts</h3>
+    <div *ngFor="let post of posts$ | async" class="p-4 mb-4 bg-white rounded-lg shadow-md">
+      <p class="text-gray-800">{{ post.content }}</p>
+      <small class="block text-gray-500 mt-2">Posted by {{ post.author }} on {{ post.date | date:'short' }}</small>
+    </div>
+  </div>
+</div>
