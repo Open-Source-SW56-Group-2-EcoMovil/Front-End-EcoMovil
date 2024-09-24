@@ -95,6 +95,19 @@
       "url": "https://bmx.com",
       "lat": -12.097343278386779,
       "lng": -77.07080274350476
+    },
+    {
+      "id": 9,
+      "name": "BMX",
+      "type": "rollskater",
+      "year": 2003,
+      "salePrice": 500,
+      "rentailPrice": 50,
+      "description": "50 X Hora",
+      "url": "https://bmx.com",
+      "lat": -12.1470976,
+      "lng": -76.9458176,
+      "apiId": "v1"
     }
   ]
 }
