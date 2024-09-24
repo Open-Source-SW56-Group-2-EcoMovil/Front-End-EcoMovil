@@ -1,0 +1,30 @@
+
+.page{
+}
+
+.columna {              /* Cada columna ocupa el mismo ancho base */
+  padding: 10px;          /* Espacio interior de las columnas */
+  box-sizing: border-box; /* Incluye el padding en el tamaño total del elemento */
+  /*border: 1px solid black; !* Solo para visualización *!*/
+}
+
+.columna-mayor {
+  flex: 5;                /* La columna del medio es 3 veces más ancha que las otras */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Centra los componentes verticalmente */
+  /*align-items: first;     !* Centra los componentes horizontalmente *!*/
+  /*border: 1px solid black; !* Solo para visualización *!*/
+}
+
+.componente {
+  margin: 10px;            /* Espacio entre los componentes */
+  padding: 10px;           /* Espacio interior de los componentes */
+  box-sizing: border-box;  /* Incluye el padding en el tamaño total del elemento */
+  /*border: 1px solid black; !* Solo para visualización *!*/
+
+}
+
+.title{
+  margin-top: 20px;
+}
