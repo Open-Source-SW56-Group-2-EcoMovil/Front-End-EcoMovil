@@ -1,0 +1,39 @@
+<section id="vehiclesSection">
+  <div class="container mx-auto px-4 sm:px-6 lg:px-28 py-6 flex-wrap items-center justify-between">
+
+    <!-- Filtros -->
+    <div class="flex justify-between items-center mb-6">
+      <mat-form-field appearance="fill" class="w-40">
+        <mat-label>All types</mat-label>
+        <mat-select [(value)]="selectedType" (selectionChange)="onTypeChange($event.value)">
+          <mat-option *ngFor="let type of types" [value]="type">{{ type }}</mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <mat-form-field appearance="fill" class="w-40">
+        <mat-label>Price: Lowest to Highest</mat-label>
+        <mat-select [(value)]="selectedPrice" (selectionChange)="onPriceChange($event.value)">
+          <mat-option value="Lowest to Highest">Lowest to Highest</mat-option>
+          <mat-option value="Highest to Lowest">Highest to Lowest</mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+
+    <!-- Vehículos -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <mat-card *ngFor="let vehicle of vehicleData" class="shadow-lg rounded-lg">
+        <img mat-card-image [src]="getLogoUrl(vehicle.url)" [alt]="vehicle.name" class="h-40 object-cover mb-4">
+        <mat-card-content>
+          <h3 class="text-lg font-bold mb-2">{{ vehicle.name }}</h3>
+          <p class="text-gray-600">{{ vehicle.type }}</p>
+          <p class="text-gray-600">{{ vehicle.description }}</p>
+        </mat-card-content>
+        <mat-card-actions class="flex justify-between mt-4">
+          <button *ngIf="vehicle.salePrice" mat-button color="primary">Buy</button>
+          <button *ngIf="vehicle.rentailPrice" mat-button color="warn">Rent</button>
+        </mat-card-actions>
+      </mat-card>
+    </div>
+
+  </div>
+</section>
