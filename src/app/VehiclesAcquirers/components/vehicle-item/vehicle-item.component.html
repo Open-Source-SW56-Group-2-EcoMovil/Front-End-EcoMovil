@@ -1,0 +1,26 @@
+
+
+
+<mat-card class="example-card" appearance="outlined">
+    <div class="image"><img mat-card-image src="{{vehicle.image}}" alt="{{vehicle.name}}"></div>
+  <mat-card-header class="header"><p style="font-weight: bold" style="font-size: 30px; color:#1ACD81" >{{vehicle.name}}</p></mat-card-header>
+  <mat-card-content class="content">
+    <p>{{vehicle.description}}</p>
+
+
+
+  </mat-card-content>
+
+  <mat-card-actions>
+    <p class = "cost" *ngIf="vehicle.type == 'Rent'; else showCostBuy">${{vehicle.cost}}/day</p>
+    <ng-template #showCostBuy>
+      <p class = "cost">${{vehicle.cost}}</p>
+    </ng-template>
+     <a class = "boton-example"  mat-fab extended routerLink="." (click)="onClick()">
+      {{vehicle.type}}
+    </a>
+  </mat-card-actions>
+
+</mat-card>
+
+
