@@ -15,5 +15,28 @@
       "description": "Bicicleta de montaña con suspensión doble para los terrenos más difíciles.",
       "url": "https://bmx.com"
     }
+  ],
+  "vehiclesAcquirers": [
+    {
+      "name": "Mountain Bike",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRufPULk63aooPmIvA2e7qKjGxpq69dfIvs8A&s",
+      "description": "Explore trails and paths with our mountain bike.",
+      "cost": 20,
+      "type": "Rent"
+    },
+    {
+      "name": "Electric Bike",
+      "image": "https://m.media-amazon.com/images/I/71kX4vTDyqL._AC_UF1000,1000_QL80_.jpg",
+      "description": "Get around with ease and comfort on our electric bicycle.",
+      "cost": 30,
+      "type": "Rent"
+    },
+    {
+      "name": "Electric Scooter",
+      "image": "https://target.scene7.com/is/image/Target/GUEST_4e9dc1fa-df7c-4004-a1cb-d60f3bf54635?wid=488&hei=488&fmt=pjpeg",
+      "description": "Move around the city quickly and ecologically with our electric scooter",
+      "cost": 52,
+      "type": "Buy"
+    }
   ]
 }
