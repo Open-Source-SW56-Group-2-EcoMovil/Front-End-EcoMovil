@@ -13,7 +13,7 @@
 
         <!-- Campo Name -->
         <div class="flex flex-col">
-          <label for="name" class="text-black-alpha-10 font-medium mb-2">Name</label>
+          <label for="name" class="text-black-alpha-10 font-medium mb-2">{{'name'|translate}}</label>
           <input
             id="name"
             name="name"
@@ -23,7 +23,7 @@
             class="border rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-green-500"
           />
           <div *ngIf="name.invalid && name.touched" class="text-red-500 text-sm mt-1">
-            Name is required
+            {{ 'name_required' | translate }}
           </div>
         </div>
 
@@ -38,13 +38,13 @@
             required
             class="border rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-green-500"
           >
-            <option value="" disabled selected>Select a type</option>
-            <option value="Bike">Bike</option>
-            <option value="rollskater">rollskater</option>
-            <option value="monopatin">monopatin</option>
+            <option value="" disabled selected>{{'select_type' | translate}}</option>
+            <option value="Bike">{{ 'bike' | translate }}</option>
+            <option value="rollskater">{{ 'rollskater' | translate}}</option>
+            <option value="monopatin">{{ 'scooter' | translate }}</option>
           </select>
           <div *ngIf="type.invalid && type.touched" class="text-red-500 text-sm mt-1">
-            Type is required
+            {{ 'type_required' | translate }}
           </div>
         </div>
 
@@ -61,7 +61,7 @@
             class="border rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-green-500"
           />
           <div *ngIf="year.invalid && year.touched" class="text-red-500 text-sm mt-1">
-            Year is required
+            {{'year_required'|translate}}
           </div>
         </div>
 
@@ -79,7 +79,7 @@
             class="border rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-green-500"
           />
           <div *ngIf="price.invalid && price.touched" class="text-red-500 text-sm mt-1">
-            Price is required
+            {{ 'price_required' | translate }}
           </div>
         </div>
 
@@ -97,7 +97,7 @@
             class="border rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-green-500"
           />
           <div *ngIf="rentalPrice.invalid && rentalPrice.touched" class="text-red-500 text-sm mt-1">
-            Rental Price is required
+            {{ 'rental_price_required' | translate }}
           </div>
         </div>
 
@@ -114,7 +114,7 @@
             class="border rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-green-500"
           ></textarea>
           <div *ngIf="description.invalid && description.touched" class="text-red-500 text-sm mt-1">
-            Description is required
+            {{ 'description_required' | translate }}
           </div>
         </div>
 

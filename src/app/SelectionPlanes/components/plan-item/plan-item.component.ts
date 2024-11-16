@@ -13,6 +13,7 @@ import {MatIcon} from "@angular/material/icon";
 import {MatFabAnchor} from "@angular/material/button";
 import {Router, RouterLink} from "@angular/router";
 import {PaymentService} from "../../../shared/services/payment.service";
+import {TranslateModule} from "@ngx-translate/core";
 
 @Component({
   selector: 'app-plan-item',
@@ -26,7 +27,8 @@ import {PaymentService} from "../../../shared/services/payment.service";
     MatIcon,
     MatFabAnchor,
     RouterLink,
-    MatCardFooter
+    MatCardFooter,
+    TranslateModule
   ],
   templateUrl: './plan-item.component.html',
   styleUrl: './plan-item.component.css'
