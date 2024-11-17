@@ -14,11 +14,11 @@
         <h2 class="text-lg font-semibold">{{ 'name' | translate }}:</h2>
         <p>{{ user?.name }}</p>
 
-        <h2 class="text-lg font-semibold mt-4">Email:</h2>
-        <p>{{ user?.email }}</p>
+        <h2 class="text-lg font-semibold">{{ 'email' | translate }}:</h2>
+        <p *ngIf="user?.email && user?.email !== 'example@gmail.com'">{{ user?.email }}</p>
 
         <h2 class="text-lg font-semibold mt-4">{{ 'phone' | translate }}:</h2>
-        <p>{{ user?.phone }}</p>
+        <p *ngIf="user?.phone && user?.phone !== '123456781'">{{ user?.phone }}</p>
       </div>
 
       <!-- Imagen del usuario a la derecha -->
@@ -29,9 +29,9 @@
 
     <!-- Acciones: Botón de acción centrado -->
     <mat-card-actions class="mt-6 flex justify-center">
-      @for (option of options; track option.title){
-        <button [routerLink]="option.path" mat-raised-button class="bg-customGreen hover:bg-green-600 text-white w-full py-2">{{ 'edit_profile' | translate }}</button>
-      }
+      <button mat-raised-button class="bg-customGreen hover:bg-green-600 text-white w-full py-2">
+        {{ 'edit_profile' | translate }}
+      </button>
     </mat-card-actions>
   </mat-card>
 </div>

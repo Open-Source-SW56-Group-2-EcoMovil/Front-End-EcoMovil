@@ -5,12 +5,6 @@
     <!-- Filtros -->
     <div class="flex justify-between items-center mb-6">
       <mat-form-field appearance="fill" class="w-40">
-        <mat-label>{{ 'all_types' | translate }}</mat-label>
-        <mat-select [(value)]="selectedType" (selectionChange)="onTypeChange($event.value)">
-          <mat-option *ngFor="let type of types" [value]="type">{{ type }}</mat-option>
-        </mat-select>
-      </mat-form-field>
-      <mat-form-field appearance="fill" class="w-40">
         <mat-label>{{ 'price_l_h' | translate }}</mat-label>
         <mat-select [(value)]="selectedPrice" (selectionChange)="onPriceChange($event.value)">
           <mat-option value="Lowest to Highest">{{ 'lowest_highest' | translate }}</mat-option>
