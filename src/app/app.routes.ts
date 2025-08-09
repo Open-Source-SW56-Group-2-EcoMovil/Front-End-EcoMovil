@@ -49,10 +49,10 @@ export const routes: Routes = [
         pathMatch: 'full'
       }
     ]
-    , canActivate: [authenticationGuard]
+    // , canActivate: [authenticationGuard] // Comentado temporalmente para pruebas
   },
   { path: 'payment', component: PaymentPageComponent}, // Ruta para "payment"
-  {path: 'home', component: HomeAcquirerComponent},//, canActivate: [authenticationGuard]
+  {path: 'home', component: HomeAcquirerComponent},// canActivate: [authenticationGuard] - Comentado temporalmente
   {path: 'interactiveMap', component: InteractiveMapComponent},
   {path: 'filter', component: FilterAcquirerComponent},
   { path: 'vehicleDetailsAcquirer/:id', component: VehicleDetailsAcquirerComponent},
